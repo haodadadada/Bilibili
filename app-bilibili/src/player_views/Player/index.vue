@@ -103,7 +103,7 @@
                         <!-- 控件区域 -->
                         <div class="player-control-bottom flex">
                             <div class="player-control-bottom-left flex-start flex-1">
-                                <div class="player-ctrl-btn player-ctrl-play">
+                                <div class="player-ctrl-btn player-ctrl-play" @click="handleClickCtrlBtn">
                                     <svg v-if="!isPlaying" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 28" width="28" height="28" preserveAspectRatio="xMidYMid meet" style="width: 100%; height: 100%; transform: translate3d(0px, 0px, 0px);">
                                         <defs>
                                             <clipPath id="__lottie_element_1281">
@@ -385,9 +385,6 @@
                                 </div>
                             </div>
                             <div class="player-control-bottom-right flex-end flex-1">
-                                <div @click="handleClickDownloadBtn">
-                                    <span style="color: #fff;">下载</span>
-                                </div>
                                 <!-- 清晰度 -->
                                 <div class="player-ctrl-quality player-ctrl-btn size-14 weight-6">
                                     <transition name="opacity-fade">
@@ -1246,6 +1243,19 @@
     };
 
     // **播放器操作模块
+
+    const handleClickCtrlBtn = () => {
+        if(!isPlaying.value) {
+            updatePlayStateAndAction(true);
+        } 
+        else {
+            updatePlayStateAndAction(false);
+        };
+        if(pauseDanmaku) {
+            pauseDanmaku();
+        };
+    };
+
     const curVideoVolume = ref(50);
     const updatePlayerVolume = async (volume: string | number) => {
         try {
@@ -1270,13 +1280,6 @@
     };
     const handleChangeVolume = async () => {
         await updatePlayerVolume(curVideoVolume.value);
-    };
-
-    // 下载视频
-    const handleClickDownloadBtn = () => {
-        if(!videoInfo.value) return;
-        const { bvid = '', cid = ''} = videoInfo.value;
-        window.electronAPI.sendMessage('download_video', { bvid, cid, sessdata, videoId: curQuality.value });
     };
 
     // 控制音量显示

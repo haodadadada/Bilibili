@@ -1,4 +1,5 @@
 仿b站桌面端App
+> **此项目仅个人爱好用于学习和交流，不得用于商业用途**
 # 本项目使用Vue3 + Electron开发
 
 # 功能
@@ -17,4 +18,11 @@ npm i 安装依赖
 # 打包
 npm run electron:build 
 
-还有部分功能未实现未来会持续更新。
+# 截图
+![推荐视频](screenshot/index01.png)  
+![热门视频](screenshot/index02.png)  
+![视频详情](screenshot/index03.png)  
+![评论详情](screenshot/index04.png)  
+
+
+部分功能未实现未来会持续更新。
