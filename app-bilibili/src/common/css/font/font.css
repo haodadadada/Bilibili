@@ -1,0 +1,13 @@
+/* 在线链接服务仅供平台体验和调试使用，平台不承诺服务的稳定性，企业客户需下载字体包自行发布使用并做好备份。 */
+@font-face {
+  font-family: "阿里妈妈方圆体";src: url("//at.alicdn.com/wf/webfont/dXegtlxF904S/cODt8JehhMH6.woff2") format("woff2"),
+  url("//at.alicdn.com/wf/webfont/dXegtlxF904S/biwvrtILKFiA.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'HarmonyOS Sans';
+  src: url('@/assets/fonts/HarmonyOS_Sans_Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
