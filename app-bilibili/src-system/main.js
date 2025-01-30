@@ -28,7 +28,7 @@ let win = null;
 let tray;
 
 const mainWindowConfigure = () => {
-  win.webContents.openDevTools();
+  // win.webContents.openDevTools();
   globalShortcut.register('CommandOrControl+R', () => win.reload());
   globalShortcut.register('F5', () => win.reload());
 };
@@ -131,7 +131,6 @@ const createLoginWindow = () => {
     },
     transparent: true,
     frame: false
-    // resizable: true
   });
   if (process.env.VITE_DEV_SERVER_URL) {
     loginWindow.loadURL(process.env.VITE_DEV_SERVER_URL + 'src/windows/login.html');
@@ -158,7 +157,7 @@ let playerWindow = new Proxy(
 );
 
 const playerWindowConfigure =  () => {
-  playerWindow.value.webContents.openDevTools();
+  // playerWindow.value.webContents.openDevTools();
 };
 const hanlePlayerWindowEvents = () => {
   playerWindow.value.once('ready-to-show', () => playerWindow.value.show());
