@@ -31,8 +31,8 @@
 npm install 安装依赖
 
 # 运行
-npm run dev 客户端执行
-npm start 服务器端执行
+在app-bilibili目录下执行 npm run dev 客户端
+在serve-bilibili目录下执行 npm start 服务器端
 
 # 打包
 npm run electron:build 
