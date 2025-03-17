@@ -31,7 +31,7 @@ let win = null;
 let tray;
 
 const mainWindowConfigure = () => {
-  win.webContents.openDevTools();
+  // win.webContents.openDevTools();
   globalShortcut.register('CommandOrControl+R', () => win.reload());
   globalShortcut.register('F5', () => win.reload());
   win.webContents.on('render-process-gone', (e, details) => {
