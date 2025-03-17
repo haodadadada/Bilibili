@@ -28,7 +28,7 @@
 * express(后端服务)
 
 # 初始化
-npm install 安装依赖
+在 app-bilibili和serve0bilibili 分别 npm install 安装依赖
 
 # 运行
 npm install 安装依赖

@@ -1,10 +1,5 @@
 {
   "name": "bilibili",
-  "private": true,
-  "workspaces": [
-    "app-bilibili",
-    "serve-bilibili"
-  ],
   "config": {
     "commitizen": {
       "path": "node_modules/cz-customizable"
