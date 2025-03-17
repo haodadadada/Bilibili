@@ -1,0 +1,74 @@
+@import url('./light.scss');
+:root {
+    --theme-bg-color: #121212;
+    --theme-text-color: #e6e6e6;
+    --theme-hover-color: rgba(204, 204, 204, 0.2);
+    --theme-side-bg-color: #272829;
+    --theme-side-text-color: #e6e6e6;
+    --theme-subtitle-color: #61666D;
+    --video-card-reason: var(--Or8);
+
+    // 热门导航栏
+    --hot-tab-color: #E84B85;
+    --hot-tab-bg: #3F0723;
+
+    // 同色
+    --bg1-float: var(--Ga8);
+    --bg2-float: var(--Ga9);
+    --bg3-float: var(--Ga10);
+    --bg1-float-hover: var(--Ga7);
+    
+    // 入站必刷
+    --hot-precious-history-text: var(--Or6);
+    --hot-precious-history-bg: var(--Or10);
+    --graph_bg_regular: var(--Ga9);
+    --bg1: var(--Ba0);
+
+    // 选择器颜色
+    --line-color: var(--Ga9);
+    --select-color: var(--Ga5);
+
+    // 按钮
+    --button-bg-color: #000;
+    --button-border-color: var(--Ga8);
+    --button-bg-color-hover: rgb(36, 38, 40);
+    --button-bg-color-disabled: #242628;
+    --button-border-color-disabled: #242628;
+    --button-color-disabled: #343e45;
+
+    --dialog-bg-color: #242628;
+}
+html[data-theme=light] {
+    --theme-bg-color: #FDFEFE;
+    --theme-text-color: #070707;
+    --theme-hover-color: rgba(34, 34, 34, 0.1);
+    --theme-side-bg-color: #F0F3F4;
+    --theme-side-text-color: #707070;
+    --theme-subtitle-color: #9499A0;
+    --video-card-reason: var(--Or1);
+
+    --hot-tab-color: #FF8CB0;
+    --hot-tab-bg: #FFECF1;
+
+    --bg1-float: var(--Ga11);
+    --bg2-float: var(--Ga12);
+    --bg3-float: var(--Ga13);
+    --bg1-float-hover: var(--Ga3);
+    
+    --hot-precious-history-text: var(--Or5);
+    --hot-precious-history-bg: var(--Or0);
+    --graph_bg_regular: var(--Ga1);
+    --bg1: var(--Wh0);
+
+    --line-color: var(--Ga2);
+    --select-color: var(--Ga7);
+
+    --button-bg-color: #fff;
+    --button-border-color: var(--Ga2);
+    --button-bg-color-hover: var(--Ga1);
+    --button-bg-color-disabled: #fff;
+    --button-border-color-disabled: #f6f6f7;
+    --button-color-disabled: #d2d4d8;
+
+    --dialog-bg-color: #fff;
+}

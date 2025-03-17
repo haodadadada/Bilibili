@@ -1,0 +1,145 @@
+{
+  "name": "bilibili_imitation",
+  "description": "仿bilibili客户端应用",
+  "author": "CJH",
+  "type": "module",
+  "private": true,
+  "version": "0.0.0",
+  "main": "./src-system/main.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "tsc": "tsc",
+    "electron:build": "vite build && electron-builder",
+    "clean": "rimraf dist",
+    "commit": "cz"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-customizable"
+    },
+    "cz-customizable": {
+      "config": ".cz-config.cjs"
+    }
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.0.9",
+    "@types/dompurify": "^3.0.5",
+    "@types/ramda": "^0.30.2",
+    "axios": "^1.7.2",
+    "brotli-wasm": "^3.0.1",
+    "dashjs": "^4.7.4",
+    "dompurify": "^3.1.6",
+    "dotenv": "^16.4.5",
+    "echarts": "^5.5.0",
+    "electron-log": "^5.1.5",
+    "element-plus": "^2.9.0",
+    "fflate": "^0.8.2",
+    "ffmpeg-static": "^5.2.0",
+    "hls.js": "^1.5.20",
+    "lodash": "^4.17.21",
+    "md5": "^2.3.0",
+    "moment": "^2.30.1",
+    "ping": "^0.4.4",
+    "protobufjs": "^7.4.0",
+    "qrcode": "^1.5.3",
+    "ramda": "^0.30.1",
+    "sass": "^1.77.6",
+    "shaka-player": "^4.10.9",
+    "video.js": "^8.17.3",
+    "vue": "^3.4.29",
+    "vue-router": "^4.0.13",
+    "vuex": "^4.1.0",
+    "vuex-persistedstate": "^4.1.0",
+    "ws": "^8.18.1"
+  },
+  "devDependencies": {
+    "@babel/eslint-parser": "^7.17.0",
+    "@eslint/js": "^9.7.0",
+    "@tailwindcss/postcss": "^4.0.9",
+    "@types/md5": "^2.3.5",
+    "@types/node": "^22.5.5",
+    "@types/qrcode": "^1.5.5",
+    "@typescript-eslint/eslint-plugin": "^8.18.1",
+    "@typescript-eslint/parser": "^8.18.1",
+    "@vitejs/plugin-vue": "^5.2.1",
+    "@vue/compiler-sfc": "^3.5.5",
+    "autoprefixer": "^10.4.20",
+    "commitizen": "^4.3.1",
+    "cz-conventional-changelog": "^3.3.0",
+    "cz-customizable": "^7.4.0",
+    "electron": "^31.1.0",
+    "electron-builder": "^24.13.3",
+    "electron-devtools-installer": "^3.2.0",
+    "eslint": "^9.7.0",
+    "eslint-plugin-vue": "^9.27.0",
+    "globals": "^15.8.0",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^4.0.9",
+    "terser": "^5.33.0",
+    "typescript": "5.0",
+    "typescript-eslint": "^8.5.0",
+    "unplugin-auto-import": "^0.17.6",
+    "unplugin-vue-components": "^0.27.0",
+    "vite": "^5.3.4",
+    "vite-plugin-electron": "^0.28.7",
+    "vite-plugin-eslint": "^1.8.1",
+    "vite-svg-loader": "^5.1.0",
+    "vue-eslint-parser": "^9.4.3"
+  },
+  "build": {
+    "productName": "MyBilibiliApp",
+    "appId": "dyy.dongyuanwai",
+    "copyright": "dyy.dongyuanwai © 2024",
+    "compression": "maximum",
+    "asar": true,
+    "directories": {
+      "output": "release/"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "perMachine": true,
+      "deleteAppDataOnUninstall": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "毕里毕里"
+    },
+    "win": {
+      "icon": "./public/icon/bilibili-logo.ico",
+      "artifactName": "${productName}-v${version}-${platform}-setup.${ext}",
+      "target": [
+        {
+          "target": "nsis"
+        }
+      ]
+    },
+    "mac": {
+      "icon": "./public/icon/bilibili-logo.ico",
+      "artifactName": "${productName}-v${version}-${platform}-setup.${ext}"
+    },
+    "linux": {
+      "icon": "./public/icon/bilibili-logo.ico",
+      "artifactName": "${productName}-v${version}-${platform}-setup.${ext}"
+    },
+    "files": [
+      "dist/**/*",
+      "dist-electron/**/*",
+      "src-system/**/*",
+      "package.json",
+      "preload.js",
+      "windows/**/*"
+    ],
+    "extraResources": [
+      {
+        "from": "./public",
+        "to": "./public"
+      },
+      {
+        "from": "node_modules/ffmpeg-static/ffmpeg.exe",
+        "to": "resources/ffmpeg.exe"
+      }
+    ]
+  }
+}

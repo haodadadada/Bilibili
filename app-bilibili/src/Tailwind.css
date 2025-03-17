@@ -1,0 +1,13 @@
+@import "tailwindcss";
+@layer utilities {
+    .container {
+        max-width: none;
+        max-height: none;
+    }
+    .invisible {
+        visibility: inherit;
+    }
+}
+* {
+    box-sizing: content-box;
+}

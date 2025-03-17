@@ -1,0 +1,118 @@
+.flex {
+    display: flex;
+    &-center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &-start {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    &-end {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    &-column {
+        display: flex;
+        flex-direction: column;
+    }
+    &-between {
+        display: flex;
+        justify-content: space-between;
+    }
+    &-around {
+        display: flex;
+        justify-content: space-around;
+    }
+    &-column-center {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    &-column-start {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+    }
+    @for $i from 1 to 10 {
+        &-#{$i} {
+            flex: #{$i};
+        }
+    }
+} 
+
+.grid {
+    display: grid;
+}
+
+@for $i from 1 to 51 {
+    .mb-#{$i} {
+        margin-bottom: #{$i}px;
+    }
+    .mr-#{$i} {
+        margin-right: #{$i}px;
+    }
+    .ml-#{$i} {
+        margin-left: #{$i}px;
+    }
+    .mt-#{$i} {
+        margin-top: #{$i}px;
+    }
+    .m-#{$i} {
+        margin: #{$i}px;
+    }
+    .pt-#{$i} {
+        padding-top: #{$i}px;
+    }
+    .pb-#{$i} {
+        padding-bottom: #{$i}px;
+    }
+    .pl-#{$i} {
+        padding-left: #{$i}px;
+    }
+    .pr-#{$i} {
+        padding-right: #{$i}px;
+    }
+    .p-#{$i} {
+        padding: #{$i}px;
+    }
+}
+
+@for $i from 5 to 50 {
+    .radius-#{$i} {
+        border-radius: #{$i}px;
+    }
+}
+
+.font-ali {
+    font-family: "阿里妈妈方圆体"; 
+}
+
+@for $i from 4 through 6 {
+    .weight-#{$i} {
+        font-weight: calc(100 * #{$i});
+    }
+}
+
+@for $i from 10 through 20 {
+    .line-height-#{$i} {
+        line-height: #{$i} + 'px';
+    }
+}
+
+.text {
+    &-center {
+        text-align: center;
+    }
+    &-start {
+        text-align: start;
+    }
+    &-end {
+        text-align: end;
+    }
+}
